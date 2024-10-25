@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="https://i0.wp.com/nuevodiario-assets.s3.us-east-2.amazonaws.com/wp-content/uploads/2024/01/18150736/logo-periodico-el-nuevo-diario.png">
+  <div *ngFor="let item of NewsList">
+    <ion-item>
+      <h1>{{item.title}}</h1>
+    </ion-item>
+    <ion-item>
+      <p>{{item.excerpt.rendered.replace( this.ReplaceData , "").replace(ReplaceData1, "")}}</p>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+  </div>
+</ion-content>
